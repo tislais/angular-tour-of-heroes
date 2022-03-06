@@ -1,0 +1,67 @@
+h2 {
+  @apply text-lg 
+  text-pink-400 
+  font-semibold;
+}
+
+ul {
+  @apply flex 
+  flex-col 
+  my-4 
+  rounded-lg 
+  bg-gray-100;
+}
+
+li {
+  @apply flex justify-between
+  text-sm 
+  text-pink-400 
+  tracking-wide 
+  hover:text-pink-500 
+  even:bg-gray-200/75
+  first:rounded-t-lg 
+  last:rounded-b-lg 
+  hover:bg-pink-200/90;
+}
+
+li:first-child button span {
+  @apply rounded-tl-lg;
+}
+
+li:last-child button span {
+  @apply rounded-bl-lg;
+}
+
+li.selected {
+  @apply bg-pink-200/75 hover:bg-pink-200/90;
+}
+
+button {
+  @apply w-full text-left flex items-center;
+}
+
+button div {
+  @apply p-2 font-semibold;
+}
+
+button span {
+  @apply p-2 w-8 
+  text-center 
+  bg-black/5 
+  text-black/40 
+  mr-2 
+  group-hover:text-pink-400;
+}
+
+.hero-details {
+  @apply flex flex-col;
+}
+
+input {
+  @apply border 
+  px-2 py-1 
+  rounded
+  text-sm
+  outline-transparent focus:outline-green-300
+  text-pink-400;
+}

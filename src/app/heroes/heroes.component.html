@@ -1,9 +1,23 @@
-<h2 class="text-lg text-pink-400 font-semibold">My Heroes</h2>
-<ul class="heroes flex flex-col my-4 rounded-lg bg-gray-100">
+<h2>My Heroes</h2>
+<ul class="heroes">
   <li
     *ngFor="let hero of heroes"
-    class="p-2 text-sm font-semibold text-gray-600 tracking-wide hover:text-purple-600 even:bg-gray-200 last:rounded-b"
+    class="group"
+    [class.selected]="hero === selectedHero"
   >
-    <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    <button type="button" (click)="onSelect(hero)">
+      <span class="badge">{{ hero.id }}</span>
+      <div>
+        {{ hero.name }}
+      </div>
+    </button>
   </li>
 </ul>
+<div *ngIf="selectedHero">
+  <h2>{{ selectedHero.name | uppercase }}</h2>
+  <div>id: {{ selectedHero.id }}</div>
+  <div class="hero-details">
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
+  </div>
+</div>
