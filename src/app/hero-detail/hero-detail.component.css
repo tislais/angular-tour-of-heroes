@@ -1,5 +1,5 @@
 .hero-details {
-  @apply flex flex-col;
+  @apply flex flex-col gap-2 p-4 pb-8 max-w-xs mx-auto;
 }
 
 input {

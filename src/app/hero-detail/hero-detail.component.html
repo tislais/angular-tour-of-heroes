@@ -1,8 +1,12 @@
-<div *ngIf="hero">
-  <h2>{{ hero.name | uppercase }}</h2>
-  <div><span>id: </span>{{ hero.id }}</div>
+<div *ngIf="hero" class="my-8 border bg-gray-500/75 rounded-lg">
+  <h2
+    class="py-2 px-4 text-2xl rounded-t-lg bg-white/10 text-gray-300 font-light"
+  >
+    {{ hero.id }}
+    <span class="text-white ml-2">{{ hero.name | uppercase }}</span>
+  </h2>
   <div class="hero-details">
-    <label for="hero-name">Hero name: </label>
+    <label for="hero-name" class="text-sm text-gray-200">Edit name:</label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name" />
   </div>
 </div>

@@ -1,0 +1,10 @@
+button {
+  @apply bg-gray-200
+    text-gray-600
+    text-xs
+    font-semibold
+    py-2 px-4
+    mx-auto
+    my-4
+    rounded-full;
+}
