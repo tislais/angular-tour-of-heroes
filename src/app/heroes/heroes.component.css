@@ -36,15 +36,15 @@ li.selected {
   @apply bg-pink-200/75 hover:bg-pink-200/90;
 }
 
-button {
+a {
   @apply w-full text-left flex items-center;
 }
 
-button div {
+a div {
   @apply p-2 font-semibold;
 }
 
-button span {
+a span {
   @apply p-2 w-8 
   text-center 
   bg-black/5 
