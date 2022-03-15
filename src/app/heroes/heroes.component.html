@@ -10,5 +10,13 @@
         {{ hero.name }}
       </div>
     </a>
+    <button type="button" class="px-2 text-pink-300 invisible group-hover:visible hover:text-pink-500" title="delete hero" (click)="delete(hero)">Delete</button>
   </li>
 </ul>
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+</div>
